@@ -257,7 +257,7 @@ public class MainController {
     @PostMapping("/admin/setorderstatus/{number}")
     public String editProduct(@ModelAttribute("newStatus") Status status, @PathVariable("number") String number, Model model) {
 
-        System.out.println("Пришёл статус: " + status);
+
         orderService.updateOrdersStatus(number, status);
 
         return "redirect:/adminOrders";
